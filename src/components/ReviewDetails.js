@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from './StarRating'
 
 function ReviewDetails(props) {
     return (
@@ -11,7 +12,9 @@ function ReviewDetails(props) {
                 <small>rating: {props.rating}</small>
                 <small>Reviewer: {props.full_name}</small>
                 <small>Create Date: {props.created_at}</small>
+
             </p>
+            <StarRating max={5} current={props.rating} />
         </div>
     );
 }
