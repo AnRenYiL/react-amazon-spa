@@ -5,7 +5,7 @@ class StarRating extends Component {
         let list = () => {
             let res = [];
             for (let i = 1; i <= this.props.max; i++) {
-                const color = i > this.props.current ? "black" : "yellow";
+                const color = i > this.props.current ? "black" : "#f8d656";
                 res.push(<Star key={i} style={{ color: color, width: '20px' }} />)
             }
             return res
