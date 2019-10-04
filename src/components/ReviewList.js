@@ -8,6 +8,8 @@ function ReviewList(props) {
                 <li className="ui segment" key={review.id}>
                     <ReviewDetails
                         {...review}
+                        onDeleteClick={
+                            props.onReviewDelete}
                     />
                 </li>
             ))}

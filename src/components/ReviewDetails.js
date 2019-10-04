@@ -12,7 +12,11 @@ function ReviewDetails(props) {
                 <small>rating: {props.rating}</small>
                 <small>Reviewer: {props.full_name}</small>
                 <small>Create Date: {props.created_at}</small>
-
+                <button className="ui right floated red button" onClick={() => {
+                    props.onDeleteClick(props.id)
+                }}>
+                    Delete
+			    </button>
             </p>
             <StarRating max={5} current={props.rating} />
         </div>
